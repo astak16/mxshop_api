@@ -1,0 +1,14 @@
+name: "user_web"
+port: 8021
+user_srv:
+  host: "127.0.0.1"
+  port: 50051
+jwt:
+  key: "!4eir7w"
+sms:
+  key: ""
+  secret: ""
+  expire: 300
+redis:
+  host: "go-redis"
+  port: 6379
