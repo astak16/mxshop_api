@@ -9,6 +9,9 @@ import (
 
 func Routers() *gin.Engine {
 	Router := gin.Default()
+	Router.GET("/health", func(c *gin.Context) {
+		c.JSON(200, gin.H{"code": 200, "success": true})
+	})
 
 	// 配置跨域
 	Router.Use(middlewares.Cors())
