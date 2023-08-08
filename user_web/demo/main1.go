@@ -81,7 +81,7 @@ func FilterService() {
 	}
 }
 
-func main() {
+func main1() {
 	// FilterService()
 	// AllServices()
 	Register("172.18.0.3", 8021, "user_web", []string{"mxshop", "uccs"}, "user_web")

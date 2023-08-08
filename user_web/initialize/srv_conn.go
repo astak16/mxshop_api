@@ -7,11 +7,26 @@ import (
 	"strconv"
 
 	"github.com/hashicorp/consul/api"
+	_ "github.com/mbobakov/grpc-consul-resolver"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 )
 
 func InitSrvConn() {
+	consulInfo := global.ServerConfig.ConsulInfo
+	conn, err := grpc.Dial(
+		fmt.Sprintf("consul://%s:%d/%s?wait=14s", consulInfo.Host, consulInfo.Port, global.ServerConfig.UserSrvInfo.Name),
+		grpc.WithInsecure(),
+		grpc.WithDefaultServiceConfig(`{"loadBalancingPolicy":"round_robin"}`),
+	)
+	if err != nil {
+		zap.S().Fatalf("[InitSrvConn] 连接 【用户服务失败】")
+	}
+
+	userSrvClient := proto.NewUserClient(conn)
+	global.UserSrvClient = userSrvClient
+}
+func InitSrvConn2() {
 	cfg := api.DefaultConfig()
 	cfg.Address = global.ServerConfig.ConsulInfo.Host + ":" + strconv.Itoa(global.ServerConfig.ConsulInfo.Port)
 
