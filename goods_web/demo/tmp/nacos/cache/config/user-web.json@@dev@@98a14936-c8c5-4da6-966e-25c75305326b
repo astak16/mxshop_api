@@ -1,8 +1,6 @@
 {
-    "host": "172.18.0.3",
     "name": "user_web",
     "port": 8021,
-     "tags":["mxshop","imooc","bobby","user","web"],
     "user_srv": {
         "host": "127.0.0.1",
         "port": 50051,

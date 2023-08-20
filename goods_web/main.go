@@ -2,18 +2,14 @@ package main
 
 import (
 	"fmt"
-	"mxshop_api/user_web/global"
-	"mxshop_api/user_web/initialize"
-	"mxshop_api/user_web/utils"
-	"mxshop_api/user_web/utils/register/consul"
-	myvalidator "mxshop_api/user_web/validator"
+	"mxshop_api/goods_web/global"
+	"mxshop_api/goods_web/initialize"
+	"mxshop_api/goods_web/utils"
+	"mxshop_api/goods_web/utils/register/consul"
 	"os"
 	"os/signal"
 	"syscall"
 
-	"github.com/gin-gonic/gin/binding"
-	ut "github.com/go-playground/universal-translator"
-	"github.com/go-playground/validator/v10"
 	uuid "github.com/satori/go.uuid"
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
@@ -39,19 +35,10 @@ func main() {
 		}
 	}
 
-	// 注册验证器
-	if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
-		_ = v.RegisterValidation("mobile", myvalidator.ValidateMobile)
-		_ = v.RegisterTranslation("mobile", global.Trans, func(ut ut.Translator) error {
-			return ut.Add("mobile", "{0} 非法的手机号码！", true) // see universal-translator for details
-		}, func(ut ut.Translator, fe validator.FieldError) string {
-			t, _ := ut.T("mobile", fe.Field())
-			return t
-		})
-	}
 	// defer logger.Sync()
 	// suger := logger.Sugar()
 
+	// port := 8021
 	register_cliennt := consul.NewRegistryClient(global.ServerConfig.ConsulInfo.Host, global.ServerConfig.ConsulInfo.Port)
 	serviceId := fmt.Sprintf("%s", uuid.NewV4())
 	err := register_cliennt.Register(
@@ -64,7 +51,6 @@ func main() {
 		zap.S().Panic("注册服务失败：", err.Error())
 	}
 
-	// port := 8021
 	zap.S().Debugf("启动服务器，端口：%d", global.ServerConfig.Port)
 
 	go func() {
