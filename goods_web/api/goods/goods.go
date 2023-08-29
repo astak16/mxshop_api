@@ -103,11 +103,11 @@ func List(ctx *gin.Context) {
 
 	pages := ctx.DefaultQuery("p", "0")
 	pagesInt, _ := strconv.Atoi(pages)
-	request.TopCategory = int32(pagesInt)
+	request.Pages = int32(pagesInt)
 
 	perNums := ctx.DefaultQuery("pnum", "0")
 	perNumsInt, _ := strconv.Atoi(perNums)
-	request.TopCategory = int32(perNumsInt)
+	request.PagePerNums = int32(perNumsInt)
 
 	keywords := ctx.DefaultQuery("q", "")
 	request.KeyWords = keywords

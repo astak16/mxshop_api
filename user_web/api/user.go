@@ -137,6 +137,7 @@ func PassWordLogin(c *gin.Context) {
 					"mobile": "用户不存在",
 				})
 			default:
+				fmt.Println(err)
 				c.JSON(http.StatusInternalServerError, map[string]string{
 					"mobile": "登录失败",
 				})

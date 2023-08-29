@@ -1,0 +1,19 @@
+{
+    "host": "172.18.0.6",
+    "name": "userop_web",
+    "port": 8027,
+    "tags":["mxshop","imooc","bobby","userop","web"],
+    "goods_srv": {
+        "name": "goods_srv"
+    },
+    "userop_srv": {
+        "name": "userop_srv"
+    },
+    "jwt": {
+        "key": "!4eir7w"
+    },
+    "consul": {
+        "host": "go-consul",
+        "port": 8500
+    }
+}

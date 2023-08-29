@@ -1,0 +1,26 @@
+# name: "user_web"
+# port: 8021
+
+host: "go-nacos"
+port: 8848
+namespace: "7843ffac-7cf1-443c-98e1-978bfc9c01d6"
+user: "nacos"
+password: "nacos"
+dataid: "order-web.json"
+group: "dev"
+# user_srv:
+#   host: "127.0.0.1"
+#   port: 50051
+#   name: "user_srv"
+# jwt:
+#   key: "!4eir7w"
+# sms:
+#   key: ""
+#   secret: ""
+#   expire: 300
+# redis:
+#   host: "go-redis"
+#   port: 6379
+# consul:
+#   host: "go-consul"
+#   port: 8500
