@@ -1,5 +1,5 @@
 {
-    "host": "172.18.0.6",
+    "host": "172.18.0.2",
     "name": "user_web",
     "port": 8021,
     "tags":["mxshop","imooc","bobby","user","web"],

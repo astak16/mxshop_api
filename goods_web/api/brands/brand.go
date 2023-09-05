@@ -87,7 +87,7 @@ func BrandList(ctx *gin.Context) {
 	result := make([]interface{}, 0)
 	reMap := make(map[string]interface{})
 	reMap["total"] = rsp.Total
-	for _, value := range rsp.Data[pnInt : pnInt*pSizeInt+pSizeInt] {
+	for _, value := range rsp.Data {
 		reMap := make(map[string]interface{})
 		reMap["id"] = value.Id
 		reMap["name"] = value.Name

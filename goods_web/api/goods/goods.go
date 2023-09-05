@@ -210,13 +210,14 @@ func Detail(ctx *gin.Context) {
 		"id":          r.Id,
 		"name":        r.Name,
 		"goods_brief": r.GoodsBrief,
+		"goods_sn":    r.GoodsSn,
 		"desc":        r.GoodsDesc,
 		"ship_free":   r.ShipFree,
 		"images":      r.Images,
 		"desc_images": r.DescImages,
 		"front_image": r.GoodsFrontImage,
 		"shop_price":  r.ShopPrice,
-		"ctegory": map[string]interface{}{
+		"category": map[string]interface{}{
 			"id":   r.Category.Id,
 			"name": r.Category.Name,
 		},

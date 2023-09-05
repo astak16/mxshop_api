@@ -1,5 +1,5 @@
 {
-    "host": "172.18.0.6",
+    "host": "172.18.0.2",
     "name": "order_web",
     "port": 8023,
     "tags":["mxshop","imooc","bobby","order","web"],
@@ -18,5 +18,12 @@
     "consul": {
         "host": "go-consul",
         "port": 8500
+    },
+    "alipay":{
+        "app_id":"9021000126627246",
+        "private_key":"MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCUfHw5l7Zq62uplmjuuE/anynervC7i1YAFK3QyeFXxm7ne0afImzPJ9+xUmo1S7aGpSXrHHPcWtv+gI44KMlDa74gd3I0lS8+XcexKkpCyvN0p93XuzV/C92AMi+cilm8vEj0W0/88XRVC885kUDIGR4gkUUWs94WqGxTq3Su3uX0hNNuWamklrjft8pD2eElaSWMEDWEVO+t1aLI8nWQj4rus12e1nS93roTCQGu0o1/wsOEJYSiBitNFB+6ybDZGfR87LTsBfWETEb3cAsTJ+w5lwaWcesfaSE4GkEXWyG+7hOMH1Vs4HItn03KmRiPmLQurEY8vT7vrsrZLk+LAgMBAAECggEAIXpPp8yE3GZnx7yZu/jiSDBKiGJ49E/d+/atmb1qiRe8OYSZz5c7YRlkXd5vA8UmSgVCH1gy5yO1JhRl/FN1zTWlkDxeC2z3UeBi/ZbDV3vamBqg8drLnPFX52dpRKoMwXjSGgXcavMlf2dCOYB+Up8XI9Cc+xlioUkn41Vs4WAYHYBr6XZZpZZIAJXxuelQ6uEfqJECMRXBmejyU1GIsGHxfAPWtKgo9o9d5138L+cVDfSGvK59F076YqfnF7nIUivOCld//oPbudgGFHjDzMes15VgKBTYS8mOE/MtD6BBh4VCI6ynIz7jd8wzthPBhSg7YtPI8Zb1rda7fydxQQKBgQDETEbbMQsb7HEdF0ZHJHGhXsnag0nP622QmjorkNmVsmNA8mvJ8Q3z8IvSkhlq9mTIGoYxVmXM2x0LWy61swqRvhAVz7JM4dbbuRBhIQ4JDqkIJQT74y5btYGTs6HLItJqUxygBRJxPpmNuWe2upRzSxRUTzTGNaEfrHEG4Rtz/wKBgQDBpZlsWzS4M8g7VbcwhIjpE4L5XiSZZgmPUPbe0gS1JRea05Ofc5bsqE+jnCxfu0hmpGmJJgkCGz/carfsC+O2QM5ETgznc1Eoho96EJ29uo9bSrnTTZTGbZ1eKI4QufOPOumKGouGoBqzRcpy2QB+lOBlx6Q0HmWYLhjfue20dQKBgBJhtizmbczimkEIIeudjQp4btyIeMwAltT4rEPSH532A3dcfB1/9jeGqgFA7yJmCk/2s+RA2+2QAytCEaCwMGgvbSAtv9uVNmKC9PazerX8anW5ybqwrnGmEIk9RARasWuFduPBNdXm78gmuYCR/j7BpBi1BhMdiIYHxtnHEKQPAoGAeHdOhIwQte7wx4jBV5t7mJOczQj197/0foW9rkw0xYP3tUed9HnyD/N856lGKZ/WoJPzW3Cf9gGBrtts45lZ5Y1XRELR4EJq4K0lIKipmNgwSnioNX1z6iVS2rqb9mfXzui1VEbDOdLsCU6HbP72QcjX+DlEO3AVf6BdtQBzkekCgYBHidXtnsopaKujhOwym+eN7xM3wqIPLr+ovZcosl1qQPvloY/ngkWaPz2V2e8K5yWcpyT1g1BLb8lGqWcXvReh5jllKaEAcvXS+NfrMx3WpiaEbpp70qyka8vbaLOJWcYhyAvLzbAuAp0082CglZfZyglxTZsrSKSb/dZaYcKgBg==",
+        "ali_public_key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0JHwmlwvzn1tGexWbhClzEAUQFCoPiVVX8jZjkrkh4ZkJUgmaBGEODVju01DdefCLXb08WeLczJzv6sJ9Q9UyPL/X2cZ+7NYOM6UzPDf0QjfqYXf75MX6DyleDtTFrAJ5h/vZGRpVYY1FL1Hf9U05Gpduox9ubSKA6Wk0BwNovU1QBflWhklFeto4CPFD5CW6ieW0DdSV7jUPYyXtrz8l7y4gnYCy07UwLtPiOGneJyuDqmJZeI4oJJ29LGb2qhv7DnG6ZX+pnz6SNP2J2jpebn9wBTH0AnIG3qUjPJ2+pmSYi2WjM5Mi5fqSVJv1fMJKeSNhiCa1oVaVBWZU8zbtQIDAQAB",
+        "notify_url":"https://xxx",
+        "return_url":"https://xxx"
     }
 }

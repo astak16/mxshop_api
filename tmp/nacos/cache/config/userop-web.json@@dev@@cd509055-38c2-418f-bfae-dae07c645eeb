@@ -1,5 +1,5 @@
 {
-    "host": "172.18.0.6",
+    "host": "172.18.0.2",
     "name": "userop_web",
     "port": 8027,
     "tags":["mxshop","imooc","bobby","userop","web"],
